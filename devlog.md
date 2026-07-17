@@ -21,3 +21,9 @@
 - Updated page.tsx to import About.tsx
 - Made a temp text for the about section
 - used spacing instead of boarders for seperation
+
+## Day 4 (June/2)
+### Restructure
+- Reworked globals.css, layout.tsx, Hero.tsx, and About.tsx to be cleaner and more organinzed. 
+- Added toggle button between dark and light theme.
+- learned more about how to make CSS varable more dynamic and reusable.
