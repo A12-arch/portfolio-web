@@ -1,3 +1,15 @@
+const styles = {
+  section:    { borderColor: "var(--border)" },
+  label:      { color: "var(--subtle)" },
+  heading:    { color: "var(--foreground)" },
+  body:       { color: "var(--muted)" },
+  skillTier:  { color: "var(--subtle)" },
+  tag:        { borderColor: "var(--border)", color: "var(--muted)", backgroundColor: "var(--background-alt)" },
+  certCard:   { borderColor: "var(--border)", backgroundColor: "var(--background-alt)" },
+  certTitle:  { color: "var(--foreground)" },
+  certTag:    { borderColor: "var(--border)", color: "var(--muted)" },
+};
+
 const skills = {
   Strong: ["C++", "HTML", "CSS", "Tailwind CSS", "Next.js"],
   Familiar: ["Python", "JavaScript", "SQL"],
@@ -11,14 +23,11 @@ const cert = {
 
 export default function About() {
   return (
-    <section id="about" className="py-32 border-t" style={{ borderColor: "var(--border)" }}>
+    <section id="about" className="py-32 border-t" style={styles.section}>
       <div className="max-w-5xl mx-auto px-6">
 
         {/* Section label */}
-        <p
-          className="text-xs font-medium tracking-widest uppercase mb-10"
-          style={{ color: "var(--subtle)" }}
-        >
+        <p className="text-xs font-medium tracking-widest uppercase mb-10" style={styles.label}>
           About
         </p>
 
@@ -26,35 +35,27 @@ export default function About() {
 
           {/* Left — story */}
           <div>
-            <h2
-              className="text-3xl font-semibold leading-snug mb-6"
-              style={{ color: "var(--foreground)" }}
-            >
-              I learn fast, go deep,
-              <br />and actually ship.
+            <h2 className="text-3xl font-semibold leading-snug mb-6" style={styles.heading}>
+              Passionate about tech,
+              <br />still finding my path.
             </h2>
 
-            <div
-              className="space-y-4 text-base leading-relaxed"
-              style={{ color: "var(--muted)" }}
-            >
+            <div className="space-y-4 text-base leading-relaxed" style={styles.body}>
               <p>
-                I'm a CS graduate who sits at the intersection of two things
-                most people pick one of: building software and understanding
-                how it breaks. That dual perspective shapes how I approach
-                every project.
+                I'm a CS graduate with a genuine interest in a lot of areas —
+                cybersecurity, software engineering, game development, and
+                whatever else catches my curiosity. I haven't locked in on one
+                direction yet, and I think that's okay.
               </p>
               <p>
-                My security research into WPA2 vs WPA3 taught me that the gap
-                between "it works" and "it's secure" is enormous — and worth
-                caring about. My ATM backend project taught me that good
-                software engineering is just as much about edge cases and
-                failure states as it is about the happy path.
+                The projects I have so far came from my coursework — a wireless
+                network security research comparing WPA2 and WPA3, and a group
+                project building the backend of an ATM system. They're not
+                flashy, but they were real problems I had to think through.
               </p>
               <p>
-                I'm comfortable picking up new tools and stacks. Currently
-                deepening my knowledge in Node.js, TypeScript, and network
-                security.
+                I'm currently learning and building more. This site will grow
+                as I do.
               </p>
             </div>
           </div>
@@ -64,32 +65,16 @@ export default function About() {
 
             {/* Skills by tier */}
             <div>
-              <p
-                className="text-xs font-medium tracking-widest uppercase mb-5"
-                style={{ color: "var(--subtle)" }}
-              >
+              <p className="text-xs font-medium tracking-widest uppercase mb-5" style={styles.label}>
                 Skills
               </p>
               <div className="space-y-5">
                 {Object.entries(skills).map(([tier, items]) => (
                   <div key={tier}>
-                    <p
-                      className="text-xs mb-2"
-                      style={{ color: "var(--subtle)" }}
-                    >
-                      {tier}
-                    </p>
+                    <p className="text-xs mb-2" style={styles.skillTier}>{tier}</p>
                     <div className="flex flex-wrap gap-2">
                       {items.map((skill) => (
-                        <span
-                          key={skill}
-                          className="text-xs px-3 py-1 rounded-full border"
-                          style={{
-                            borderColor: "var(--border)",
-                            color: "var(--muted)",
-                            backgroundColor: "var(--background-alt)",
-                          }}
-                        >
+                        <span key={skill} className="text-xs px-3 py-1 rounded-full border" style={styles.tag}>
                           {skill}
                         </span>
                       ))}
@@ -100,35 +85,16 @@ export default function About() {
             </div>
 
             {/* Certification */}
-            <div
-              className="rounded-xl border p-5"
-              style={{
-                borderColor: "var(--border)",
-                backgroundColor: "var(--background-alt)",
-              }}
-            >
-              <p
-                className="text-xs font-medium tracking-widest uppercase mb-3"
-                style={{ color: "var(--subtle)" }}
-              >
+            <div className="rounded-xl border p-5" style={styles.certCard}>
+              <p className="text-xs font-medium tracking-widest uppercase mb-3" style={styles.label}>
                 Certification
               </p>
-              <p
-                className="text-sm font-medium mb-3"
-                style={{ color: "var(--foreground)" }}
-              >
+              <p className="text-sm font-medium mb-3" style={styles.certTitle}>
                 {cert.name}
               </p>
               <div className="flex flex-wrap gap-2">
                 {cert.tools.map((tool) => (
-                  <span
-                    key={tool}
-                    className="text-xs px-2.5 py-1 rounded-full border"
-                    style={{
-                      borderColor: "var(--border)",
-                      color: "var(--muted)",
-                    }}
-                  >
+                  <span key={tool} className="text-xs px-2.5 py-1 rounded-full border" style={styles.certTag}>
                     {tool}
                   </span>
                 ))}

@@ -27,3 +27,4 @@
 - Reworked globals.css, layout.tsx, Hero.tsx, and About.tsx to be cleaner and more organinzed. 
 - Added toggle button between dark and light theme.
 - learned more about how to make CSS varable more dynamic and reusable.
+
