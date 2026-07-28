@@ -15,7 +15,7 @@ const projects = [
     description: "Compared WPA2 and WPA3 protocols, analysed packet captures, and demonstrated how WPA2 handshakes can be cracked. A deep dive into why the upgrade to WPA3 actually matters.",
     tags: ["Cybersecurity", "Wireshark", "Network analysis"],
     type: "Research",
-    github: "pp",
+    github: "",
   },
   {
     title: "ATM Software Engineering Project",

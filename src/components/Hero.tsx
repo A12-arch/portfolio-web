@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 const styles = {
   toggleBtn: {
     borderColor: "var(--border)",
@@ -13,41 +9,18 @@ const styles = {
     color: "var(--muted)",
     backgroundColor: "var(--background-alt)",
   },
-  dot:         { backgroundColor: "#1D9E75" },
-  name:        { color: "var(--foreground)" },
-  tagline:     { color: "var(--muted)" },
-  bio:         { color: "var(--muted)" },
-  btnPrimary:  { backgroundColor: "var(--accent)", color: "var(--accent-fg)" },
-  btnSecondary:{ borderColor: "var(--border)", color: "var(--foreground)", backgroundColor: "transparent" },
-  social:      { color: "var(--subtle)" },
+  dot: { backgroundColor: "#1D9E75" },
+  name: { color: "var(--foreground)" },
+  tagline: { color: "var(--muted)" },
+  bio: { color: "var(--muted)" },
+  btnPrimary: { backgroundColor: "var(--accent)", color: "var(--accent-fg)" },
+  btnSecondary: { borderColor: "var(--border)", color: "var(--foreground)", backgroundColor: "transparent" },
+  social: { color: "var(--subtle)" },
 };
 
 export default function Hero() {
-  const [dark, setDark] = useState(false);
-
-  useEffect(() => {
-    setDark(document.documentElement.classList.contains("dark"));
-  }, []);
-
-  function toggleTheme() {
-    const isDark = document.documentElement.classList.toggle("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    setDark(isDark);
-  }
-
   return (
     <section className="min-h-screen flex items-center relative">
-
-      {/* Dark mode toggle — top right */}
-      <button
-        onClick={toggleTheme}
-        aria-label="Toggle dark mode"
-        className="absolute top-6 right-6 w-9 h-9 rounded-full border flex items-center justify-center text-sm cursor-pointer"
-        style={styles.toggleBtn}
-      >
-        {dark ? "☀" : "☾"}
-      </button>
-
       <div className="max-w-5xl mx-auto px-6 py-24">
 
         {/* Name */}
