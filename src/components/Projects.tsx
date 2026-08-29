@@ -7,16 +7,17 @@ const styles = {
 	title: { color: "var(--foreground)" },
 	desc: { color: "var(--muted)" },
 	tag: { borderColor: "var(--border)", color: "var(--muted)" },
+	link:     { color: "var(--subtle)" },
 };
 
 const projects = [
 	{
-    title: "Personal Portfolio Website",
-    description: "Designed and built this portfolio from scratch using Next.js and Tailwind CSS. Includes dark mode, a clean component structure, and is deployed on Vercel.",
-    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
-    type: "Web Development",
-    github: "https://github.com/adam-khe/portfolio-web",
-    live: "https://adam-k-portfolio.vercel.app",
+		title: "Personal Portfolio Website",
+		description: "Designed and built this portfolio from scratch using Next.js and Tailwind CSS. Includes dark mode, a clean component structure, and is deployed on Vercel.",
+		tags: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
+		type: "Web Development",
+		github: "https://github.com/adam-khe/portfolio-web",
+		live: "https://adam-k-portfolio.vercel.app",
     },
 	{
 		title: "Wireless Network Security Research",
@@ -24,6 +25,7 @@ const projects = [
 		tags: ["Cybersecurity", "Wireshark", "Network analysis"],
 		type: "Research",
 		github: "",
+		live: "",
 	},
 	{
 		title: "ATM Software Engineering Project",
@@ -31,6 +33,7 @@ const projects = [
 		tags: ["Software engineering", "Backend", "Team project"],
 		type: "Engineering",
 		github: "",
+		live: "",
 	},
 ];
 
